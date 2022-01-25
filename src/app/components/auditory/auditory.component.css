@@ -1,0 +1,148 @@
+.cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.colortext{
+    color: #333333 !important;
+    justify-content: flex-start;
+}
+.mtabla{
+    width: 100% !important;
+}
+.mthtitle{
+    min-width: 140px !important;
+}
+.header{
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.cont_1{
+    width: 150px;
+    background: #648915;
+    height: 40px;
+    border-radius: 8px 0px 0px 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.cont_2{
+    padding: 0px 15px;
+    width: 100px;
+    background: #31563D;
+    height: 40px;
+    border-radius: 0px 8px 8px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.mtbody{
+    min-width: 650px !important;
+}
+.itemm{
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 3px;
+}
+.titleh{
+    font-size: 15px;
+    color: white;
+    margin-right: 14px;
+}
+.iconmenu{
+    margin-top: 1px;
+    font-size: 19px;
+    color: white;
+    margin-right: 20px;
+}
+.itemsmenuinp{
+    width: 60%;
+    padding-top: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1;
+    transition: all ease-out .4s;
+}
+.itemsmenuinpo{
+    opacity: 0;
+    width: 50px;
+}
+.inputsearch{
+    font-size: 14px;
+    color: #333333;
+    width: calc(60% - 16px);
+    border: none;
+    background: none;
+    overflow-wrap: break-word;
+    outline: none;
+    border-bottom: 1px solid #555;
+    height: 26px;
+}
+.selectsearch{
+    margin-top: 5px;
+    width: calc(30% - 17px); 
+}
+.itemsmenuinpnone{
+    display: none;
+}
+.minwidth{
+    min-width: 80px !important;
+}
+.cont_pag{
+    padding-right: 15px;
+    height: 40px;
+    border-radius: 0px 0px 15px 15px;
+    border:  1px solid #333333;
+    position: absolute;
+    bottom: -58px;
+    left: 0px;
+    align-items: center;
+    overflow: hidden;
+}
+.cont_items_pag{
+    margin-top: -8px;
+    margin-left: -20px;
+}
+.cantptetx{
+    font-size: 12px;
+    color: white;
+}
+.cantp{
+    width: 25px;
+    height: 40px;
+    background: none;
+    outline: none;
+    border: none;
+    text-align: end;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.total_cant{
+    color: white;
+    font-size: 14px;
+    font-weight: 500; 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

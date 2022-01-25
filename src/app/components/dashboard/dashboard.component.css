@@ -1,0 +1,256 @@
+.cont{
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    transition: all ease-in .3s;
+}
+
+.conttext{
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 260px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    transition: all ease-in .3s;
+}
+.conttextph{
+    width: 50%;
+    top: 30px;
+}
+.itemdata{
+    width: 180px;
+}
+.linetext1{
+    width: 100%;
+    height: 3px;
+    background: #071A0A;
+}
+.divtext1{
+    width: 100%;
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.texttitlte{
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    text-align: end;
+    right: 0px;
+    bottom: -30px;
+    opacity: 0;
+    font-size: 17px;
+    color: #071A0A;
+    font-weight: 500;
+    transition: all ease-in .3s;
+}
+.texttitlteph{
+    font-size: 16px;
+}
+.noneph{
+    display: none;
+}
+.divhora{
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #333333;
+}
+.menu{
+    margin-left: 20px;
+    width: 25%;
+    border-radius: 10px;
+    border: 1px solid #071A0A;
+    padding: 6px;
+    transition: all ease-in .3s;
+    overflow: hidden;
+}
+.menum{
+    width: 55px;
+}
+.menuc{
+    padding: 30px 0px;
+    background: rgb(49,86,61);
+    background: linear-gradient(128deg, rgba(49,86,61,1) 0%, rgba(7,26,10,1) 100%);
+    border-radius: 10px;
+    width: 100%;
+}
+.contitem{
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+    transition: all ease-in .2s;
+    opacity: 0;
+}
+.item{
+    padding: 0px 20px;
+    min-width: 250px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all ease-in .3s;
+    cursor: pointer;
+}
+.subitem{
+    padding: 0px 20px;
+    min-width: 250px;
+    height: 40px;
+    background: rgba(7,7,10,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.subitem:hover{
+    background: rgba(7,7,10,0.5);
+}
+.item:hover{
+    background-color: #071a0a62;
+}
+.itemt{
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 13px;
+    color: whitesmoke;
+    min-width: 200px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.subitemt{
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 12px;
+    margin-left: 5px;
+    color: #ffc560;
+    min-width: 200px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.select{
+    width: calc(100% - 4px);
+    background-color: #071a0a70;
+    border-right: 4px solid #ffc560;
+}
+.iconmenu{
+    transition: all ease-in .3s;
+    margin-left: -40px;
+    font-size: 18px;
+    margin-right: 20px;
+    color: white;
+    opacity: 0.8;
+}
+.subiconitem{
+    transition: all ease-in .3s;
+    margin-left: -40px;
+    font-size: 16px;
+    margin-right: 30px;
+    color: white;
+    opacity: 0.6;
+}
+@keyframes animationicon{
+    to{ margin-left: 0px; }
+}
+@keyframes animationiconex{
+    0%{margin-left: 0px;}
+    100%{ margin-left: -40px; }
+}
+.itemsa0{
+    animation: itemsa .2s ease-in  both;
+}
+.itemsa1{
+    animation: itemsa .2s ease-in .1s both;
+}
+.itemsa2{
+    animation: itemsa .2s ease-in .2s both;
+}
+.itemsa3{
+    animation: itemsa .2s ease-in .3s both;
+}
+.itemsa4{
+    animation: itemsa .2s ease-in .4s both;
+}
+.itemsa5{
+    animation: itemsa .2s ease-in .5s both;
+}
+.itemsa6{
+    animation: itemsa .2s ease-in .6s both;
+}
+.itemsa7{
+    animation: itemsa .2s ease-in .7s both;
+}
+.itemsa8{
+    animation: itemsa .2s ease-in .8s both;
+}
+
+@keyframes itemsa{
+    to{ opacity: 1; }
+}
+.contitems{
+    padding: 15px;
+    opacity: 1;
+    margin-right: 20px;
+    width: 64%;
+    border: 1px solid #071A0A;
+    border-radius: 16px;
+    transition: all ease-in .3s;
+    animation: contitemsa .4s ease-out;
+}
+@keyframes contitemsa{
+    from{ opacity: 0; margin-left: 0%;}
+    to{ opacity: 1; margin-left: 3%; }
+}
+.contitemsa{
+    opacity: 0;
+    margin-left: 1%;
+}
+.maxw{
+    width: 82%;
+}
+.menuph{
+    transition: all ease-in .4s;
+    position: absolute;
+    left: -100%;
+    top: 65px;
+    width: 94%;
+    z-index: 100;
+}
+.menushow{
+    left: -13px;
+}
+.itemsph{
+    height: 30px;
+}
+.btnopen{
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 22px;
+    z-index: 110;
+}
+.btnopenv{
+    display: block;
+}
+.contitemsph{
+    margin: auto;
+    margin-top:90px;
+    width: 86%;
+    height: 75%;
+}.sopacity{
+    opacity: 0;
+}
+.iconfab{
+    color: white;
+}

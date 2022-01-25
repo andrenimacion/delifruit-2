@@ -1,0 +1,68 @@
+<div class="cont" (scroll)="mscroll($event)">
+    <div class="spaceimg">
+        <div class="image" id="people">
+        </div>
+        <div class="background" id="opacity">
+        </div>
+        <button class="btndel" (click)="closed()" mat-icon-button aria-label="Example icon button with a vertical three dot icon"><mat-icon class="iconcl">clear</mat-icon></button>
+        <button class="btnedi" mat-icon-button aria-label="Example icon button with a vertical three dot icon"><div class="iconintdiv"><input type="file" id="mimg" class="editint" (change)="changeimg()"><mat-icon class="iconc2">edit</mat-icon></div></button>
+    </div>
+    <div class="cont1" [formGroup]="formmanager">
+      <div class="contitle">
+        <span class="title">Datos personales</span>
+        <button class="btnsav" (click)="save()" mat-icon-button aria-label="Example icon button with a vertical three dot icon" *ngIf="state"><mat-icon class="iconc3">save</mat-icon></button>
+      </div>
+        <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Nombres</mat-label>
+            <input matInput formControlName="name" (keyup)="changes()">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Apellidos</mat-label>
+            <input matInput formControlName="fullname" (keyup)="changes()">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Cedula</mat-label>
+            <input matInput formControlName="cedula" (keyup)="changes()">
+          </mat-form-field>
+    </div>
+    <div class="cont1 cont2" id="element2" [formGroup]="formmanager">
+      <div class="contitle">
+        <span class="title">Datos de contacto</span>
+        <button class="btnsav" (click)="save()" mat-icon-button aria-label="Example icon button with a vertical three dot icon" *ngIf="state"><mat-icon class="iconc3">save</mat-icon></button>
+      </div>
+        <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Correo</mat-label>
+            <input matInput formControlName="email" (keyup)="changes()">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Telefono</mat-label>
+            <input matInput  formControlName="phone" (keyup)="changes()">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Direccion</mat-label>
+            <input matInput formControlName="direccion" (keyup)="changes()">
+          </mat-form-field>
+    </div>
+    <div class="cont1 cont2"  id="element3" [formGroup]="formmanager">
+        <div class="contitle">
+          <span class="title">Datos de ingreso</span>
+          <button class="btnsav" (click)="save()" mat-icon-button aria-label="Example icon button with a vertical three dot icon" *ngIf="state"><mat-icon class="iconc3">save</mat-icon></button>
+        </div>
+        <mat-form-field appearance="fill" class="inputs">
+            <mat-label>Fecha</mat-label>
+            <input matInput formControlName="date">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="inputs" > 
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password" (keyup)="changes()">
+          </mat-form-field>
+          <mat-form-field appearance="fill"  class="inputs"> 
+            <mat-label>Tipo</mat-label>
+            <mat-select formControlName="type">
+              <mat-option *ngFor="let type of types" (click)="changes()" [value]="type.value">
+                {{type.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+</div>

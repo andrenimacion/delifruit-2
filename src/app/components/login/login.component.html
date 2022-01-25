@@ -1,0 +1,33 @@
+<div class="cont" ngClass.xs="contph"  [@itemsindexanit]="cont">
+    <div class="divhora">{{date}}</div>
+    <div class="conttext" ngClass.xs="noneph">
+        <div class="divtext1"><div class="texttitlte" [@itemsindexanit]="mytitle">Control de banano</div> </div>
+        <div class="linetext1"></div>
+        <div class="divtext1"><div class="texttitext" [@itemsindexanit]="mytext">App el control de producción/embalaje/transporte de banano</div>
+        </div> 
+    </div> 
+    <div class="contlogo" ngClass.xs="logoph" [class.minex]="exit">
+      <img src="../../../assets/logo.png" class="imglogo" ngClass.xs="imglogoph">
+    </div>
+    <img src="../../../assets/Banano-Caja.png" [@itemsindexanit]="banana" class="banano" ngClass.xs="bananoph">
+    <div class="form" ngClass.xs="formph" [class.minex]="exit">
+            <div class="border1"></div><div class="border2"></div><div class="border3"></div><div class="border4"></div>
+            <form class="formf" [formGroup]="login">
+                <div class="title">Login</div>
+                <mat-form-field class="inputs"> 
+                    <mat-label>Username</mat-label>
+                    <input matInput formControlName="username" placeholder="Gerencia" required type="text">
+                    <mat-error *ngIf=""></mat-error>
+                  </mat-form-field> 
+                  <mat-form-field class="inputs">
+                    <mat-label>Password</mat-label>
+                    <input matInput  formControlName="password" (keyup.enter)="loginf()" [type]="hide ? 'password' : 'text'">
+                    <div style="cursor: pointer;" mat-icon-button matSuffix (click)="hide = !hide" >
+                      <mat-icon style="color: #E2B66C;font-size: 15px;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </div>
+                    <mat-error *ngIf=""></mat-error>
+                  </mat-form-field>
+                  <button class="btnbutton" (click)="loginf()">Ingresar</button>
+            </form>
+    </div>
+</div> 

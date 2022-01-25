@@ -1,0 +1,287 @@
+.cont{
+    width: 100%;
+    height: 100%;
+    background: rgba(7,26,10,0.96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: all ease-in .3s;
+}
+.contph{
+    flex-direction: column;
+}
+.contphx{
+    background: whitesmoke;
+}
+
+.conttext{
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 300px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.linetext1{
+    width: 100%;
+    height: 5px;
+    background: #E2B66C;
+}
+.divtext1{
+    width: 100%;
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.texttitlte{
+    width: 190px;
+    height: 25px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    font-size: 23px;
+    color: #E2B66C;
+    font-weight: 500;
+    transition: all ease-in .3s;
+}
+.divtext1x{
+    animation: none;
+    opacity: 0;bottom: -30px;
+}
+.texttitext{
+    height: 25px;
+    position: absolute;
+    font-size: 10px;
+    color: #E2B66C;
+    font-weight: 500;
+    right: 0px;
+    top: 0px;
+    animation: texttitexta .4s .2s ease-out both;
+    transition: all ease-in .3s;
+}
+.texttitextx{
+    animation: none;
+    opacity: 0;top: -20px;
+}
+
+.divhora{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 110px;
+    border-radius: 10px 0px 0px 0px;
+    height: 18px;
+    background-color: #333333;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+.noneph{
+    display: none;
+}
+.contlogo{
+    width: 130px;
+    height: 100px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    animation: logoa .4s .1s ease-out both;
+}
+.logo{
+    width: 100%;
+}
+@keyframes logoa {
+    0%{  opacity: 0; left: -150px;
+
+    }100%{  opacity: 1; left: 10px;
+    }
+}
+.logoph{
+    top: 0px;
+    margin-left: 10px;
+    left: 0px;
+    position: relative;
+    width: 320px;
+    height: 200px;
+    overflow: hidden;
+    animation: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.banano{
+    position: relative;
+    width: 300px;
+    z-index: 10;
+    opacity: 0;
+    transition: all ease-in .3s;
+}
+.opacity{
+    opacity: 0;
+}
+.imglogo{
+    width: 100%;
+}
+.imglogoph{
+    margin-top:  300px;
+    opacity: 0;
+    animation: imglogopha .6s .1s ease-out both;
+}
+@keyframes imglogopha {
+    to{     opacity: 1; margin-top: 0px;
+    }
+}
+.bananoph{
+    position: absolute; 
+    width: 200px;
+    transform: rotate(-85deg);
+    bottom: -100px;
+    right: -50px;
+}
+.form{
+    position: relative;
+    width: 300px;
+    height: 370px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: -330px;
+    z-index: 5;
+    animation: contforma .4s .7s ease-out both;
+}
+@keyframes contforma {
+    to{   margin-left: 0px;
+    }
+}
+.formph{
+    margin-left: 0px;
+    z-index: 100;
+}
+.formf{
+    border-radius: 6px;
+    padding: 20px;
+    margin: 24px;
+    width: calc(100% - 83px);
+    background-color: rgba(0,0,0,0.2);
+    height: calc(100% - 83px);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    animation: formfa .2s .7s ease-out both;
+}
+@keyframes formfa {
+    to{  opacity: 1;
+    }
+}
+.title{
+    width: 58px;
+    margin: 15px 0px;
+    margin-right: calc(100% - 58px);
+    padding: 8px 0px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #E2B66C;
+    border-bottom: 3px solid #E2B66C;
+ }
+ .inputs{
+    width: 100%;
+    margin: 10px 0px;
+    color: white
+ }
+ .btnbutton{
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 34px;
+    font-size: 14px;
+    border: 1px solid #E2B66C;
+    color: #E2B66C;
+    background-color: transparent
+ } 
+ ::ng-deep .mat-form-field-label{
+    color:rgba(218, 218, 218, 0.8) !important;
+ }
+ ::ng-deep .mat-focused .mat-form-field-label {
+    color: #E2B66C !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    background-color: #E2B66C !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   background-color: #E2B66C !important;;
+  }
+  ::ng-deep .mat-input-element::placeholder{
+    color: rgba(255, 255, 255, 0.727);
+ }
+
+.border1{
+    background: #E2B66C;
+    opacity: 0.9;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 2px;
+    width: 100%;
+    animation: border1a .2s .1s ease-out both;
+}
+@keyframes border1a {
+    0%{ width:0%;
+    }100%{  width: 100%;
+    }
+}
+.border2{
+    background: #E2B66C;
+    position: absolute;
+    opacity: 0.9;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 2px;
+    animation: border2a .2s .3s ease-out both;
+}
+@keyframes border2a {
+    0%{ height:0%;
+    }100%{  height: 100%;
+    }
+}
+.border3{
+    background: #E2B66C;
+    position: absolute;
+    right: 0px;
+    opacity: 0.9;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    animation: border3a .2s .5s ease-out both;
+}
+@keyframes border3a {
+    0%{ width:0%;
+    }100%{  width: 100%;
+    }
+}
+.border4{
+    background: #E2B66C;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    opacity: 0.9;
+    width: 2px;
+    animation: border4a .3s .7s ease-out both;
+}
+@keyframes border4a {
+    0%{ height:0%;
+    }100%{  height: 100%;
+        animation: borderopacitya .2s .7s ease-out both;
+    }
+} 

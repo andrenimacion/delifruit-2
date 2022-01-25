@@ -1,0 +1,28 @@
+<div class="cont">
+    <div class="conttext" ngClass.xs="conttextph" [class.itemdata]="statemenu">
+        <div class="divtext1"><div class="texttitlte" [@dashanit]="texttitlte" ngClass.xs="texttitlteph">{{saludo}}, {{nameuser | titlecase}}</div> </div>
+        <div class="linetext1"></div>
+    </div>
+    <div class="divhora">{{date}}</div>
+    <div class="menu" [class.menushow]="varshowmenu" [class.menum]="statemenu" ngClass.xs="menuph">
+        <div class="menuc">
+            <div *ngFor="let menu of menus; index as i" [class]="'contitem itemsa'+i" [class.select]="menu.select" [id]="menu.icon" >
+                <div class="item" (click) ="opensubmenu(menu.icon, menu.select)">
+                    <span class="material-icons iconmenu" [id]="menu.icon+'icon'">{{menu.icon}}</span>
+                    <div class="itemt">{{menu.title}}</div>
+                </div>  
+                <div class="subitem" (click) ="changesettings(menu.icon)">
+                    <span class="material-icons subiconitem" [id]="menu.icon+'mast'">settings</span>
+                    <div class="subitemt">Maestro</div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="contitems" [class.contitemsa]="exit" [class.maxw]="statemenu" ngClass.xs="contitemsph">
+        <router-outlet name="home"></router-outlet>
+    </div>
+    <button mat-fab class="btnopen" ngClass.xs="btnopenv" (click)="showmenu()" aria-label="Example icon button with a delete icon">
+        <mat-icon class="iconfab" *ngIf="!varshowmenu">menu</mat-icon>
+        <mat-icon class="iconfab" *ngIf="varshowmenu">clear</mat-icon>
+      </button>
+</div>

@@ -1,0 +1,222 @@
+ .cont{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: flex-start;
+     width: 100%;
+     height: 100%;
+     max-height: 600px;
+    transition: all ease-in .4s;
+    overflow: hidden;
+    opacity: 0;
+    animation: conta .3s ease-in both;
+ }
+ @keyframes conta {
+     to{
+         opacity: 1;
+     }
+ }
+ .body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+ }
+.iconclosed{
+    color: #E2B66C;
+}
+.titlediv{
+    display: flex;
+    padding: 20px 20px;
+    flex-direction: row;
+    align-items: flex-end;
+    width: calc(100% - 40px);
+    min-height: 30px;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    color: white;
+    background: #31563D;
+    margin-bottom: 10px;
+ }
+ .btnclosed{
+     position: absolute;
+     right: 12px;    
+     top: 16px;
+}
+.select{
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid #ffc663;
+    border-top: 8px solid  transparent;
+    border-bottom: 8px solid  transparent;
+    margin-right: 8px;
+}
+ .title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffc663;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+ .btndoisabled{
+     width: 5px;
+     height: 5px;
+     opacity: 0;
+ }
+ .contadd{
+    display: flex;
+    padding: 5px 25px;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 50px);
+    height: 40px;
+    justify-content: space-between;
+}
+.input{
+    width: calc(100% - 90px);
+}
+.butonadd{
+    width: 80px;
+    height: 36px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    background: #31563D;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.bodytab{
+    margin: 15px 20px;
+    width: calc(100% - 40px);
+    max-height: 300px;
+    overflow-y: scroll;
+    transition: all ease-in 10s;
+    animation: bodya .4s ease-out .1s;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.tdmenu{
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+}
+.trtitle{
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.tritems{
+    height: 40px;
+    cursor: pointer;
+    transition: all ease-in .4s;
+}
+.tritems:hover{
+    transition: all ease-in .4s;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+.itemsmenu{
+    width: 50%;
+    height: 70px;
+    padding-bottom: 10px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+cursor: pointer;
+border-radius: 8px;
+}
+.itemsmenu:hover{
+    background-color: #f0f0f0;
+}
+#Capa_1{
+    transform: rotate(0deg) scale(1)
+}
+.mpath1{
+    transition: all ease-in .4s;
+    fill: rgba(0, 0, 0, 0.3);
+    stroke-dasharray: 1000; 
+    stroke-dashoffset: 0;
+}
+.bpath1{
+    transition: all ease-in .4s;
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 26px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+
+}
+.bpath2{
+    transition: all ease-in .4s;
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 26px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+
+}
+.bpath3{
+    transition: all ease-in .4s;
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 26px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+.textmenu{
+    margin-top: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    transition: all ease-in .3s;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      transition: all ease-in .3s;
+    background: #31563D;
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: #006335;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #E4E8EB;
+}
+
+::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+}

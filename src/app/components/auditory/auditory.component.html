@@ -1,0 +1,58 @@
+<div class="cont">
+    <div class="header">
+      <div class="cont_1">
+        <div class="itemm"></div>
+        <div class="titleh">Auditoria</div>
+        <span class="material-icons iconmenu">pageview</span>
+      </div>
+      <div class="cont_2">
+        <div class="cantptetx">Cant</div>
+        <input type="number" [(ngModel)]="itemsPerPage" class="cantp">
+        <div class="total_cant">/{{total}}</div>
+      </div>
+    </div>
+    <div class="itemsmenuinp">
+      <input class="inputsearch" type="text" id="search" placeholder="Buscar" (keyup)="search()">
+      <mat-form-field class="selectsearch">
+        <mat-label>Filtro</mat-label>
+        <mat-select [formControl]="selectfilter">
+          <mat-option *ngFor="let filter of filters" [value]="filter.value">
+            {{filter.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="btnfilter" matRipple (click)="order()" [title]="ordertitle">
+        <span class="material-icons iconorder">{{ordericon}}</span>
+      </div>
+    </div>
+    <div class="mtabla">
+        <div class="mbody">
+            <div class="mthead">
+              <div class="mthtitle noselect color_title" (click)="changeorder('accion_user')">Accion<span id="accion_user" class="material-icons iconord"></span></div>
+              <div class="mthtitle noselect color_title" (click)="changeorder('module_codec')">Modulo<span id="module_codec" class="material-icons iconord"></span></div>
+              <div class="mthtitle noselect color_title minwidth" (click)="changeorder('local_net_address')">Ip<span id="local_net_address" class="material-icons iconord"></span></div>
+              <div class="mthtitle noselect color_title minwidth" (click)="changeorder('date')">Fecha<span id="date" class="material-icons iconord"></span></div>
+              <div class="mthtitle noselect color_title" (click)="changeorder('codec_audit')">Cod. auditoria<span id="codec_audit" class="material-icons iconord"></span></div>
+            </div>
+            <div class="mtbody">
+              <div class="item" *ngFor="let x of arraylist | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+                <div class="subitem" matRipple>
+                  <div class="mthtitle colortext">{{x.accion_user}}</div>
+                  <div class="mthtitle colortext">{{x.module_codec}}</div>
+                  <div class="mthtitle colortext minwidth">{{x.local_net_address}}</div>
+                  <div class="mthtitle colortext minwidth" (click)="showdate($event, x.date)">{{x.date | date: 'shortDate' }}</div>
+                  <div class="mthtitle colortext">{{x.codec_audit}}</div>
+                </div>
+                <button mat-icon-button class="btncelar"><mat-icon class="iconbtnm">clear</mat-icon> </button>
+              </div>
+            </div>
+          </div>
+          <!-- Aqui iria algun sub body -->
+        <div class=""></div>
+      </div>
+    <div class="cont_pag">
+      <div class="cont_items_pag">
+        <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>     
+      </div>
+    </div>
+</div>

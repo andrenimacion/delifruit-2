@@ -1,0 +1,118 @@
+<div class="cont">
+    <div class="header">
+        <div class="circle"></div>
+        <div class="titleh">Presupuesto de embalaje</div>
+        <span class="material-icons iconmenu">local_shipping</span>
+    </div>
+    <div class="itemsmenu">
+      <div class="itemsmenuinp" [class.itemsmenuinpo]="state">
+        <input class="inputsearch" type="text" id="search" placeholder="Buscar" (keyup)="search()">
+        <mat-form-field class="selectsearch">
+          <mat-label>Filtro</mat-label>
+          <mat-select [formControl]="selectfilter">
+            <mat-option *ngFor="let filter of filters" [value]="filter.value">
+              {{filter.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="btnfilter" matRipple (click)="order()" [title]="ordertitle">
+          <span class="material-icons iconorder">{{ordericon}}</span>
+        </div>
+      </div>
+      <div class="itemsmenubtn">
+        <button mat-button class="btnselect" (click)="changewin()" [class.selectbutton]="state">Ingresar</button>
+        <button mat-button class="btnselect" (click)="changewin()"[class.selectbutton]="!state">Historial</button>
+    </div>
+    </div>
+    <div class="body">
+      <form class="sesscion1" [formGroup]="formpacking" #formDirective="ngForm" [class.hiddenwin]="!state" ngClass.xs="sesscion1ph">
+        <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Hacienda</mat-label>
+            <mat-select formControlName="hacienda">
+              <mat-option *ngFor="let hacienda of haciendas" (click)="chanelots(hacienda.nombre, hacienda.codigo)" [value]="hacienda.nombre">
+                {{hacienda.nombre.replace("_", " ")}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formpacking.controls['hacienda'].hasError('required')">La hacienda es requerida </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Semana</mat-label>
+            <mat-select formControlName="semana">
+              <mat-option *ngFor="let semana of semanas" [value]="'Semana: '+ semana.sema +', Año:'+ semana.anio">
+                {{"Semana: "+ semana.sema +", Año:"+ semana.anio }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formpacking.controls['semana'].hasError('required')">La semana es requerida </mat-error>
+          </mat-form-field> 
+          <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Lote</mat-label>
+            <mat-select formControlName="lote" (click)="checklots()" >
+              <mat-option *ngFor="let lote of lotes" (click)="asignamelot(lote.nombre.trim())" [value]="lote.nombre.trim()">
+                {{lote.nombre}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formpacking.controls['hacienda'].hasError('required')">El lote es requerida </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input" ngClass.xs="inputph"> 
+            <mat-label>T. Caja</mat-label>
+            <mat-select formControlName="caja">
+              <mat-option *ngFor="let box of arraybox" [value]="box.nombre">
+                {{box.nombre}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formpacking.controls['caja'].hasError('required')">El tamaño de caja es requerida </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Marca</mat-label>
+            <mat-select formControlName="marca">
+              <mat-option *ngFor="let mark of arraymarks" [value]="mark.nombre">
+                {{mark.nombre}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formpacking.controls['marca'].hasError('required')">La marca es requerida </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Cantidad</mat-label>
+            <input matInput type="number" formControlName="cantidad" min="0" max="1000">
+            <mat-error *ngIf="formpacking.controls['marca'].hasError('required')">La cantidad es ivalida </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Destino</mat-label>
+            <input matInput formControlName="destino" type="text">
+            <mat-error *ngIf="formpacking.controls['destino'].hasError('required')">El destino es requerida </mat-error>
+          </mat-form-field>
+          <mat-form-field class="input" ngClass.xs="inputph">
+            <mat-label>Import/Export</mat-label>
+            <input matInput formControlName="import" type="text">
+            <mat-error *ngIf="formpacking.controls['destino'].hasError('required')">Es requerido </mat-error>
+          </mat-form-field>
+          <button mat-button class="btnsave" (click)="savedata()">Ingreso</button>
+        </form>
+    <div class="sesscion1" ngClass.xs="sesscion1ph">
+      <table class="tab">
+        <tr class="tr1">
+          <td class="td1">Hacienda</td>
+          <td class="td1">Lote</td>
+          <td class="td1">Semana</td>
+          <td class="td1">T .Caja</td>
+          <td class="td1">Cantidad</td>
+          <td class="td1">Marca</td>
+          <td class="td1">Destino</td>
+          <td class="td1">Exp./Imp.</td>
+        </tr>
+        <tr *ngIf="loading"><td colspan="8"><mat-progress-bar mode="query"></mat-progress-bar></td></tr>
+        <tr class="tr2" *ngFor="let x of arraylist">
+          <td class="td2">{{x.cod_hacienda}}</td>
+          <td class="td2">{{x.cod_lote}}</td>
+          <td class="td2">{{x.semana}}</td>
+          <td class="td2">{{x.t_caja}}</td>
+          <td class="td2">{{x.cantidad}}</td>
+          <td class="td2">{{x.marca}}</td>
+          <td class="td2">{{x.destino}}</td>
+          <td class="td2">{{x.exp_imp}}</td>
+          <div class="btndelet" (click)="delete(x.id)" matRipple ><mat-icon class="icondelet">clear</mat-icon></div>
+        </tr>
+      </table>
+    </div>
+    </div> 
+</div>

@@ -1,0 +1,31 @@
+<div class="cont">
+    <div class="loading" *ngIf="loading">
+        <div class="divload">
+                <div class="conload1">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;transform: scale(6);" xml:space="preserve">
+                        <style type="text/css"> .st0{fill:none;stroke:#E2B66C;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style> 
+                        <g><path id="container" class="st0" d="M1019.2,501c0,0-20.1,60-78.4,77.7s-99.9-14.3-99.9-14.3l-9.7,8.6l6.3,11.1c0,0,25.3,59.8,120.6,43.8
+                         c95.3-16,79.4-126.9,79.4-126.9s-3.2-29.1,1-34l-30.7-1.4l11.4,30.6c0,0,9.4-1.5,16.9,1.9C1036,498.1,1022.3,495.2,1019.2,501z"/> <g>
+                         <path id="linea" class="st2" d="M853.4,588.6c7.9,4.2,16.1,7.6,24.4,10.5c8.4,2.9,16.9,5,25.6,6.4c8.7,1.3,17.4,1.9,26.1,1.3c8.7-0.5,17.3-2.1,25.4-5
+                                                       c4.1-1.4,8.1-3.1,12-5c3.9-2,7.6-4.3,11.1-6.7c3.6-2.4,7-5.2,10.3-8.1l2.4-2.2c0.8-0.7,1.6-1.5,2.3-2.3c1.6-1.5,3-3.1,4.6-4.7
+                                                       c11.8-13,21.1-28.2,29.1-44.2c-6.1,16.7-14.6,32.8-26.2,46.7c-5.8,6.9-12.4,13.2-19.8,18.6c-3.7,2.7-7.6,5-11.6,7.2
+                                                        c-4.1,2.1-8.3,3.9-12.6,5.4c-8.7,3-17.7,4.6-26.8,5c-9.1,0.4-18.2-0.4-27.1-2.2c-4.4-0.9-8.8-2-13.1-3.3
+                                                       c-4.3-1.4-8.5-2.9-12.7-4.6C868.7,597.8,860.7,593.7,853.4,588.6z"/> </g>
+                      
+                      </g></svg> 
+                </div>
+                <div class="conload">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+                     <circle cx="16" cy="16" r="15.9155"  class="progress2" />
+                    </svg>
+                </div>
+        </div>
+    </div>
+    <div class="cap1" [@indexanit]="cap1anit"></div>
+    <div class="cap2" [@indexanit]="cap2anit"></div>
+    <div class="cap3" [@indexanit]="cap3anit"></div>
+    <div class="cap4" [@indexanit]="cap4anit"></div>
+    <div [ngClass]="{'filter' : loading}"class="sucont">
+        <router-outlet></router-outlet>
+    </div>
+</div>
