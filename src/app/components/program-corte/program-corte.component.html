@@ -1,0 +1,56 @@
+<div>
+    <div class=" ds btn-group d-flex align-items-center "
+         role="group" aria-label="Basic radio toggle button group">
+        <span class="d-flex align-items-center" > <mat-icon>date_range</mat-icon> Semanas:</span>
+        <div class="semaconts  d-flex">
+            <div *ngFor="let mh of arrSemanas" (click)="putSema(mh.sema, 'padre')">
+              
+                    <input type="radio" class="btnss btn-check" 
+                           name="btnradio" id="btnradio1-{{mh.sema}}"
+                           autocomplete="off" checked>
+                    <label class="btn btn-outline-success" 
+                           style="border-radius: 0 !important;"
+                           for="btnradio1-{{mh.sema}}">
+                           {{mh.sema}}
+                    </label>
+              
+            </div>
+        </div>
+    </div>
+</div>   
+<!-- (click)="putSema(mh.sema)" -->
+<div class="contmaxtable" id="padre">
+    <div class="tableFixHead container-fluid p-0" *ngFor="let jtable of arrSemanas" id="sema:{{jtable.sema}}" >
+        <table class="table table-success table-bordered border-secondary" >
+            <thead class="table-dark bg-dark" >
+                <th> Haciendas </th>
+                <th *ngFor="let jj of xdias" > {{jj}} </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let xhacienda of haciendasArr">
+                    <td [ngStyle]="{'background-color': bg_hac}">
+                        {{xhacienda.nombre}}
+                    </td>
+                    <td *ngFor="let xj of xdias" id="dias-{{xj}}" >
+                        <textarea id="id:{{xj}}:{{xhacienda.nombre}}:{{jtable.sema}}"
+                                  class="form-control" rows="2"
+                                  (click)="getCellBox('id:'+xj+':'+xhacienda.nombre+':'+jtable.sema)"
+                                  (keyup.enter)="saveTextArea('id:'+xj+':'+xhacienda.nombre+':'+jtable.sema)">
+                        </textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>        
+    </div>
+</div>
+<div class="footer text-secondary p-3">
+    <strong>
+        Ubicación:
+    </strong>
+    <span class="xcon p-1 bg-dark" style="border-radius: 3px; margin-left: 10px;"> Sem.: 
+        <strong class="itm"> {{_sema}} </strong>                      </span>
+    <span class="xcon p-1 bg-dark" style="border-radius: 3px; margin-left: 10px;"> Día seleccionado.: 
+        <strong class="itm"> {{dia}} </strong>           </span>
+    <span class="xcon p-1 bg-dark" style="border-radius: 3px; margin-left: 10px;"> Hacienda seleccionada.: 
+        <strong class="itm"> {{hacienda}} </strong> </span>
+</div>

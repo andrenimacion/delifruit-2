@@ -38,6 +38,7 @@ import { DBConfig } from 'ngx-indexed-db';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NgChartsModule } from 'ng2-charts';
+import { ProgramCorteComponent } from './components/program-corte/program-corte.component';
 
 const dbConfig: DBConfig = {
   name: 'Delifruit',
@@ -68,7 +69,8 @@ const dbConfig: DBConfig = {
     ManageUsersComponent,
     EditUserComponent,
     AuditoryComponent,
-    ReportsComponent
+    ReportsComponent,
+    ProgramCorteComponent
   ],
   imports: [
     MatPaginatorModule,

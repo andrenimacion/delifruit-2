@@ -15,15 +15,41 @@ export class DashboardComponent implements OnInit {
 
   vtexttitlte = "hiddenti"
   menus = [ 
-      {icon: "local_shipping", title: "Presupuesto de embalaje", visible: false, select:false},
-      {icon: "content_cut", title: "Digitalizador orden de corte", visible: false},
-      {icon: "precision_manufacturing", title: "Transporte de caja", visible: false},
-      {icon: "bus_alert", title: "Control de contenedores", visible: false},
-      {icon: "summarize", title: "Reporte", visible: false},
-      {icon: "pageview", title: "Auditoria", visible: false},
-      {icon: "manage_accounts", title: "Usuario", visible: false},
-      {icon: "logout", title: "Cerrar sessión", visible: true},
+      { 
+        icon: "local_shipping",
+        title: "Presupuesto de embalaje", 
+        visible: false, 
+        select:false},
+      { icon: "content_cut",
+        title: "Digitalizador orden de corte",
+        visible: false},
+      { icon: "precision_manufacturing",
+        title: "Transporte de caja",
+        visible: false},
+      { icon: "bus_alert",
+        title: "Control de contenedores",
+        visible: false},
+      { 
+        icon: "summarize", 
+        title: "Reporte", 
+        visible: false
+      },
+      { 
+        icon: "pageview",
+        title: "Auditoria",
+        visible: false
+      },
+      { 
+        icon: "manage_accounts",
+        title: "Usuario",
+        visible: false},
+      { 
+        icon: "logout",
+        title: "Cerrar sessión",
+        visible: true
+      },
   ]
+
   antid = ""
   dbclick = true
   exit = false
@@ -34,15 +60,20 @@ export class DashboardComponent implements OnInit {
   f = new Date();
   date = this.f.toLocaleString();  
   hora = this.f.getHours()
+
   constructor(private indexsvc:IndexService,public dialog: MatDialog, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+
     var path = this.route.snapshot.routeConfig?.path
     if(path == null || path == ""){path = "local_shipping"}
+    
     this.menus.find((x)=>x.icon == path)!.select = true
+
     setTimeout(() => {
       this.vtexttitlte = "showti"
     }, 10);
+
     this.indexsvc.route.emit({state:true, type: true, rute: ""})
     if(this.hora <= 12 && this.hora >= 0){
       this.saludo = "Buenos Dias"
@@ -51,9 +82,11 @@ export class DashboardComponent implements OnInit {
     }else if(this.hora <= 24 && this.hora >= 18){
       this.saludo = "Buenas noches"
     } 
+    
     this.indexsvc.minmenu.subscribe((data)=>{
       this.minmenu(data)
     })
+
     this.nameuser = sessionStorage.getItem("User_Name") || "Identificate"
   }
   get texttitlte(){return this.vtexttitlte}
@@ -105,7 +138,7 @@ export class DashboardComponent implements OnInit {
       if( this.statemenu && icon != null){
         div.style.animation = "animationicon .2s ."+i+"s ease-in both"
         icon.style.animation = "animationicon .2s ."+i+1+"s ease-in both"
-      }else if(icon != null){
+      } else if(icon != null){
         div.style.animation = "animationiconex .2s ."+i+"s ease-in both"
         icon.style.animation = "animationiconex .2s ."+i+1+"s ease-in both"
       }

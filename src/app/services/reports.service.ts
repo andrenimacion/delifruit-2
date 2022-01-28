@@ -15,11 +15,17 @@ export class ReportsService {
   load_table1(ot: string, anio:string,tip:string ){
     return this.http.get( this.apiURL + 'reportes/GetInformes/' + ot + '/'  + anio+ '/'  + tip);
   }
+  
   getMaster(nomtag: string) {  
     return this.http.get( this.apiURL + 'control_alp_master_tabla/geMasterB/' + nomtag);
   }
+  
   getMaster2(master: string) {  
     return this.http.get( this.apiURL + 'control_alp_master_tabla/getLotesByHac/' + master);
+  }
+
+  getMaster3( data: string, properties: string, order: string ) {
+    return this.http.get( this.apiURL + 'control_alp_master_tabla/geMasterA/'+data+'/'+properties+'/'+order );
   }
 
 }

@@ -1,0 +1,75 @@
+td, tr {
+    border: groove 1px rgb(80, 94, 65) !important;
+}
+
+td {
+    transition: ease all 2.5s;
+    width: 300px !important;
+}
+
+td:hover {
+    transition: ease all 0.5s;
+    background-color: rgb(89, 201, 89);
+    cursor: pointer;
+}
+
+thead {
+    text-align: center;
+}
+
+textarea {
+    background-color: transparent;
+    font-size: 8pt;
+}
+
+table {
+    font-size: 8pt;
+}
+
+.btnss {
+    background: yellowgreen !important;
+}
+
+.ds {
+    background: yellowgreen;
+    padding: 10px;
+}
+
+.semaconts {
+    width: 100%;
+    overflow-x: auto;
+}
+/* 
+.dcont {
+    height: 500px;
+    overflow: auto;
+} */
+
+.tableFixHead          { overflow: scroll; height: 400px;min-width: 100%; }
+.tableFixHead thead th { position: sticky; top: 0; z-index: 1; }
+
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+th     { background:rgb(15, 55, 30); }
+
+.footer {
+    background: rgb(204, 204, 204);
+}
+
+.itm {
+    color: yellowgreen;
+}
+
+#ddtable {
+    border: solid 2px red;
+}
+
+.contmaxtable {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    transition: ease all 0.5s !important;
+    /* display: flex; */
+}

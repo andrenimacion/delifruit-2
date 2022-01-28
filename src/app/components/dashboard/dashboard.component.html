@@ -18,9 +18,11 @@
             </div>
         </div>
     </div>
+
     <div class="contitems" [class.contitemsa]="exit" [class.maxw]="statemenu" ngClass.xs="contitemsph">
         <router-outlet name="home"></router-outlet>
     </div>
+    
     <button mat-fab class="btnopen" ngClass.xs="btnopenv" (click)="showmenu()" aria-label="Example icon button with a delete icon">
         <mat-icon class="iconfab" *ngIf="!varshowmenu">menu</mat-icon>
         <mat-icon class="iconfab" *ngIf="varshowmenu">clear</mat-icon>
