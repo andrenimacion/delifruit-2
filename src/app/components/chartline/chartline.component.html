@@ -1,0 +1,140 @@
+<div class="cont" id="cont1">
+  <div class="header">
+    <div class="circle"></div>
+    <div class="titleh">{{title}}</div>
+    <div class="btn_change" (click)="change()" matRipple>
+      <span class="material-icons icon_change">sync_alt</span>
+    </div>
+</div>
+ <div class="subcontt">
+<div class="items" *ngIf="state == 'sxh'" ngClass.xs="itemsph">
+    <div id="chartdiv" class="subitem"></div>
+</div>
+<div class="items" *ngIf="state == 'hxs'" ngClass.xs="itemsph">
+  <div id="chartdiv2" class="subitem"></div>
+</div>
+  <div class="div_newtab" *ngIf="state == 'sxh'"  ngClass.xs="itemsph">
+    <div class="aubdiv_newtab" (scroll)="doSomethingOnScroll($event)">
+      <table class="tab" style="margin-right: 99px;">
+        <tr class="tr1">
+          <td class="td1">Semana</td>
+          <td class="td1">Deli 2</td>
+          <td class="td1">Deli 1</td>
+          <td class="td1">Deli 3</td>
+          <td class="td1">Deli 4</td>
+          <td class="td1">Deli 5</td>
+          <td class="td1">Deli 6</td>
+          <td class="td1">Deli 7</td>
+          <td class="td1">Deli 8</td>
+          <td class="td1">Deli 9</td>        
+          <td class="td1">Deli 10</td>
+        </tr>
+        <tr class="tr2" *ngFor="let x of arr">
+          <td class="td2">{{x.delI_1}}</td>
+          <td class="td2">{{x.delI_2}}</td>
+          <td class="td2">{{x.delI_3}}</td>
+          <td class="td2">{{x.delI_4}}</td>
+          <td class="td2">{{x.delI_5}}</td>
+          <td class="td2">{{x.delI_6}}</td>
+          <td class="td2">{{x.delI_7}}</td>
+          <td class="td2">{{x.delI_8}}</td>
+          <td class="td2">{{x.delI_9}}</td>
+          <td class="td2">{{x.delI_10}}</td>
+        </tr>
+      </table>
+    </div> 
+    <div class="total_newtab" id="total_newtab">
+      <table class="subtab" style="border-collapse: collapse;">
+        <tr class="tr1">
+          <td class="td1" style="min-width: 100px">Total enfunde por semana</td>
+        </tr>
+        <tr class="tr2" *ngFor="let x of arr">
+          <td class="td2" style="background-color: rgb(67, 216, 97);min-width: 100px">{{x.total_enfunde_semana}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="div_newtab" *ngIf="state == 'hxs'"  ngClass.xs="itemsph">
+    <div class="aubdiv_newtab" (scroll)="doSomethingOnScroll($event)">
+      <table class="tab" style="margin-right: 99px;">
+        <tr class="tr1">
+          <td class="td1">Hacienda</td>
+          <td class="td1">S 1</td>
+          <td class="td1">S 2</td>
+          <td class="td1">S 3</td>
+          <td class="td1">S 4</td>
+          <td class="td1">S 5</td>
+          <td class="td1">S 6</td>
+          <td class="td1">S 7</td>        
+          <td class="td1">S 8</td>
+          <td class="td1">S 9</td>
+          <td class="td1">S 10</td>
+          <td class="td1">S 11</td>
+          <td class="td1">S 12</td>
+          <td class="td1">S 13</td>
+          <td class="td1">S 14</td>
+          <td class="td1">S 15</td>
+          <td class="td1">S 16</td>
+          <td class="td1">S 17</td>
+          <td class="td1">S 18</td>
+          <td class="td1">S 19</td>
+          <td class="td1">S 20</td>
+          <td class="td1">S 21</td>
+          <td class="td1">S 22</td>
+          <td class="td1">S 23</td>
+          <td class="td1">S 24</td>
+          <td class="td1">S 25</td>
+          <td class="td1">S 26</td>
+          <td class="td1">S 27</td>
+          <td class="td1">S 28</td>
+          <td class="td1">S 29</td>
+          <td class="td1">S 30</td>
+        </tr>
+        <tr class="tr2" *ngFor="let x of arr">
+          <td class="td2">{{x.hacienda}}</td>
+          <td class="td2">{{x['01']}}</td>
+          <td class="td2">{{x['02']}}</td>
+          <td class="td2">{{x['03']}}</td>
+          <td class="td2">{{x['04']}}</td>
+          <td class="td2">{{x['05']}}</td>
+          <td class="td2">{{x['06']}}</td>
+          <td class="td2">{{x['07']}}</td>
+          <td class="td2">{{x['08']}}</td>
+          <td class="td2">{{x['09']}}</td>
+          <td class="td2">{{x['10']}}</td>
+          <td class="td2">{{x['11']}}</td>
+          <td class="td2">{{x['12']}}</td>
+          <td class="td2">{{x['13']}}</td>
+          <td class="td2">{{x['14']}}</td>
+          <td class="td2">{{x['15']}}</td>
+          <td class="td2">{{x['16']}}</td>
+          <td class="td2">{{x['17']}}</td>
+          <td class="td2">{{x['18']}}</td>
+          <td class="td2">{{x['19']}}</td>
+          <td class="td2">{{x['20']}}</td>
+          <td class="td2">{{x['21']}}</td>
+          <td class="td2">{{x['22']}}</td>
+          <td class="td2">{{x['23']}}</td>
+          <td class="td2">{{x['24']}}</td>
+          <td class="td2">{{x['25']}}</td>
+          <td class="td2">{{x['26']}}</td>
+          <td class="td2">{{x['27']}}</td>
+          <td class="td2">{{x['28']}}</td>
+          <td class="td2">{{x['29']}}</td>
+          <td class="td2">{{x['30']}}</td>
+        </tr>
+      </table>
+    </div> 
+    <div class="total_newtab" id="total_newtab">
+      <table class="subtab" style="border-collapse: collapse;">
+        <tr class="tr1">
+          <td class="td1" style="min-width: 100px;">Total enfunde por hacienda</td>
+        </tr>
+        <tr class="tr2" *ngFor="let x of arr">
+          <td class="td2" style="background-color: rgb(67, 216, 97);min-width: 100px">{{x.total_enfunde_hacienda}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+ </div>
+</div>

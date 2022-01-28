@@ -38,7 +38,10 @@ import { DBConfig } from 'ngx-indexed-db';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NgChartsModule } from 'ng2-charts';
-
+import { ReportComponent } from './components/report/report.component';
+import { ChartlineComponent } from './components/chartline/chartline.component';
+import { ChartbarComponent } from './components/chartbar/chartbar.component';
+import { Chartline2Component } from './components/chartline2/chartline2.component';
 const dbConfig: DBConfig = {
   name: 'Delifruit',
   version: 1,
@@ -68,7 +71,11 @@ const dbConfig: DBConfig = {
     ManageUsersComponent,
     EditUserComponent,
     AuditoryComponent,
-    ReportsComponent
+    ReportsComponent,
+    ReportComponent,
+    ChartlineComponent,
+    ChartbarComponent,
+    Chartline2Component
   ],
   imports: [
     MatPaginatorModule,
@@ -92,7 +99,7 @@ const dbConfig: DBConfig = {
     NgxPaginationModule,
     FormsModule,
     NgChartsModule,
-    
+    MatProgressBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

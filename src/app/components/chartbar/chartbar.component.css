@@ -1,0 +1,264 @@
+.cont{
+    width: 100%;
+    height: 500px;
+    max-height: 80vh;
+    position: relative;
+}
+.subcontt{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 110%;
+    overflow-y: scroll;
+}
+.items{
+    width: 50%;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 0px 0px 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.subitem{
+    width: 100%;height: 100%;min-height: 100%;transform: scale(0.9);
+}
+
+.header{
+    position: absolute; right: 10px;top: -46px;padding: 0px 7px;height: 40px;min-height:40px;
+    border-radius: 5px;background: #31563D;;display: flex;align-items: center;flex-direction: row;
+}
+.circle{
+    margin-left: 15px;margin-right: 10px;width: 6px;height: 6px;background: white;border-radius: 3px;
+}
+.titleh{
+    font-size: 15px;color: white;margin-right: 14px;
+}
+.iconmenu{
+    margin-top: 1px;
+    font-size: 18px;
+    color: white;
+    margin-right: 20px;
+}
+.sesscion1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    position: relative;
+    justify-content: space-between;
+    min-width: calc(50% - 100px);
+    max-width: calc(50% - 100px);
+    padding-right: 100px;
+    max-height: 100%;
+    transition: all ease-in .4s;
+}
+.sesscion1ph{
+    height: 100%;
+    max-height: 100%;
+}
+@keyframes bodya {
+    to{
+        opacity: 1;
+    }
+}
+.btnselect{
+    color: #648915;
+    font-size: 12px;
+    margin: 0px;
+    border-radius: 2px !important;
+    padding: 0px 10px !important;
+}
+.selectbutton{
+    font-size: 12px;
+    background-color: #648915;
+    color: white;
+}
+.input{
+    width: 48%;
+    margin-top: 8px;
+}
+::ng-deep .mat-form-field-label{
+    color: #262626 !important;
+ }
+ ::ng-deep .mat-focused .mat-form-field-label {
+    color:  #09310f !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    background-color:  #071A0A!important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color:  #071A0A !important;;
+  }
+  ::ng-deep .mat-input-element::placeholder{
+    color:  #071A0A;
+ }
+ ::ng-deep .mat-progress-bar-fill::after {
+    background-color: #31563D;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: transparent;
+}
+
+::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+}
+.btnsave{
+    margin-top: 10px;
+    margin-left: calc(100% - 110px);
+    color: white;
+    font-size: 14px;
+    width: 110px;
+    background-color: #648915;
+    border-radius: 2px !important;
+
+}
+.inputph{
+    width: 100%;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    transition: all ease-in .3s;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      transition: all ease-in .3s;
+    background: #648915;
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .mat-elevation-z8{
+      width: 100%;
+      background: none !important;
+  }
+  .titletab{
+      background: #31563D;
+      color: white;
+      text-align: center;
+  }
+  .texttab:hover{
+      background: rgba(0, 0, 0, 0.1);
+  }
+  .tab{
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+  }
+  .tr1{
+      width: 100%;
+      height: 55px;
+      background: #31563D;
+  }
+  .td1{
+      min-width: 45px;
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      position: relative;
+  }
+  .divtr{
+      width: 100%;
+  }
+  .tr2{
+    width: 100%;
+    height: 55px;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+.tr2:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.td2{
+    color: #333333;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+.color{
+    width: 15px;
+    height: 15px;
+    background: #31563D;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+}
+.btn_change{
+    padding: 3px 6px;
+    border-radius: 4px;
+    border: .3px solid #b8b8b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.icon_change{
+    font-size: 16px;
+    color: white;
+}
+.itemdiv{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_newtab{
+    width: 50%;
+    max-width: 50%;
+    max-height: 100%;
+    overflow: hidden;    
+    position: relative;
+    border-radius: 0px  12px 12px 0px;
+}
+.aubdiv_newtab{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.total_newtab{
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    width: 100px;
+    overflow-y:auto;
+    overflow-x: hidden;
+    min-width: 100px;
+    padding-right: -5px;
+    max-height: 100%;
+    background-color: whitesmoke;
+}
+.total_newtab::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.total_newtab::-webkit-scrollbar-thumb {
+    background: #ffffff;
+}
+.itemsph{
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 12px;
+}

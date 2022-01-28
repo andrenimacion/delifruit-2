@@ -1,0 +1,25 @@
+<div class="cont" id="cont1">
+  <div class="header">
+    <div class="circle"></div>
+    <div class="titleh">Haciendas y lotes</div>
+</div>
+ <div class="subcontt">
+<div class="items" ngClass.xs="itemsph">
+  <div id="chartdiv" class="subitem"></div>
+</div>
+  <div class="div_newtab"  ngClass.xs="itemsph">
+    <div class="aubdiv_newtab">
+      <table class="tab">
+        <tr class="tr1">
+          <td class="td1">Nombre</td>
+          <td class="td1">Cant. de lotes</td>
+        </tr>
+        <tr class="tr2" *ngFor="let x of arr">
+          <td class="td2">{{x.hacienda}}</td>
+          <td class="td2">{{x.cant_codigo}}</td>
+        </tr>
+      </table>
+    </div> 
+  </div>
+ </div>
+</div>

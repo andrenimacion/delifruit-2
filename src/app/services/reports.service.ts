@@ -16,10 +16,12 @@ export class ReportsService {
     return this.http.get( this.apiURL + 'reportes/GetInformes/' + ot + '/'  + anio+ '/'  + tip);
   }
   getMaster(nomtag: string) {  
-    return this.http.get( this.apiURL + 'control_alp_master_tabla/geMasterB/' + nomtag);
+    return this.http.get( this.apiURL + 'control_alp_master_tabla/geMasterC/' + nomtag);
   }
   getMaster2(master: string) {  
     return this.http.get( this.apiURL + 'control_alp_master_tabla/getLotesByHac/' + master);
   }
-
+  getHacie(nomtag: string, properties: string, order:string) {  
+    return this.http.get( this.apiURL + '/control_alp_master_tabla/geMaster/' + nomtag + '/' + properties + '/' + order);
+  }
 }

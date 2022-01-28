@@ -1,0 +1,62 @@
+<div class="cont" id="cont1">
+    <div class="header">
+      <div class="circle"></div>
+      <div class="titleh">Enfunde y cosecha</div>
+      <div class="btn_change" (click)="change()" matRipple>
+        {{value_deli}}
+        <span class="material-icons" style="margin-left: 5px;">expand_more</span>
+      </div>
+  </div>
+  <div class="list_deli" id="mlista">
+    <div class="itemtolist" matRipple *ngFor="let x of deli_list" (click)="click(x.value)">{{x.name}}</div>
+  </div>
+   <div class="subcontt" (click)="noslect()">
+  <div class="items" ngClass.xs="itemsph"  id="id_canvas">
+  
+  </div>
+    <div class="div_newtab"  ngClass.xs="itemsph">
+      <div class="aubdiv_newtab">
+        <table class="tab">
+          <tr class="tr1">
+            <td class="td1">Lote</td>
+            <td class="td1" style="min-width: 70px;">tot. enfunde</td>
+            <td class="td1">S 1</td>
+            <td class="td1">S 2</td>
+            <td class="td1">S 3</td>
+            <td class="td1">S 4</td>
+            <td class="td1">S 5</td>
+            <td class="td1">S 6</td>
+            <td class="td1">S 7</td>
+            <td class="td1">S 8</td>
+            <td class="td1">S 9</td>
+            <td class="td1">S 10</td>
+            <td class="td1">S 11</td>
+            <td class="td1">S 12</td>
+            <td class="td1" style="min-width: 70px;">tot. caidos</td>
+            <td class="td1">Recobro</td>
+            <td class="td1" style="min-width: 70px;">saldo</td>
+          </tr>
+          <tr class="tr2" *ngFor="let x of arr">
+            <td class="td2">{{x.lote}}</td>
+            <td class="td2" style="min-width: 70px;">{{x.tot_enfunde}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_01 + '80' }">{{x['01']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_02 + '80' }">{{x['02']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_03 + '80' }">{{x['03']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_04 + '80' }">{{x['04']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_05 + '80' }">{{x['05']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_06 + '80' }">{{x['06']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_07 + '80' }">{{x['07']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_08 + '80' }">{{x['08']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_09 + '80' }">{{x['09']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_10 + '80' }">{{x['10']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_11 + '80' }">{{x['11']}}</td>
+            <td class="td2" [ngStyle]="{'background' : x.cL_12 + '80' }">{{x['12']}}</td>
+            <td class="td2" style="min-width: 70px;">{{x.tot_caidos}}</td>
+            <td class="td2">{{x.recobro}}</td>
+            <td class="td2" [id]="x.lote" style="min-width: 70px;">{{x.saldo}}</td>
+          </tr>
+        </table>
+      </div> 
+    </div>
+   </div>
+  </div>

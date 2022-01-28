@@ -23,6 +23,7 @@ export class IndexService {
   getload = new EventEmitter<number>()
   minmenu = new EventEmitter<boolean>()
   loading = new EventEmitter<boolean>()
+  change = new EventEmitter<number>()
   route = new EventEmitter<any>()
   public port: string = environment.port;
   private apiURL = `https://alp-cloud.com:${this.port}/api`;

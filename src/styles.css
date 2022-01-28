@@ -10,17 +10,26 @@ body { margin: 0; font-family: 'Montserrat', sans-serif, sans-serif; }
     padding: 0px !important;
     border-radius: 10px !important;
 } 
+
 *::-webkit-scrollbar {
     height: 6px;
     width: 6px;
+    background: transparent;
 }
-
+::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  
 *::-webkit-scrollbar-thumb {
     background-color: #31563D;
     border-radius: 20px;
     box-shadow: 5px 5px 10px  rgba(0,0,0,0);
 }
-
+::ng-deep .mat-badge-content { 
+    background: #1c5cff;
+    color: whitesmoke;
+}
 .mtabla{
     width: 90%;
     margin: 0 auto;

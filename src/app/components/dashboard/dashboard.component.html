@@ -12,7 +12,19 @@
                     <div class="itemt">{{menu.title}}</div>
                 </div>  
                 <div class="subitem" (click) ="changesettings(menu.icon)">
-                    <span class="material-icons subiconitem" [id]="menu.icon+'mast'">settings</span>
+                    <span class="material-icons subiconitem" [id]="menu.icon+'mast'">{{iconmaestro}}</span>
+                    <div class="subitemt">{{textmaestro}}</div>
+                </div> 
+                <div class="subitem" (click) ="changesettings(menu.icon + 0)">
+                    <span class="material-icons subiconitem" [id]="menu.icon+'mast1'">ssid_chart</span>
+                    <div class="subitemt">Semanas y haciendas</div>
+                </div>        
+                <div class="subitem" (click) ="changesettings(menu.icon + 1)">
+                    <span class="material-icons subiconitem" [id]="menu.icon+'mast2'">leaderboard</span>
+                    <div class="subitemt">Caidos y recusados</div>
+                </div> 
+                <div class="subitem" (click) ="changesettings(menu.icon + 2)">
+                    <span class="material-icons subiconitem" [id]="menu.icon+'mast3'">select_all</span>
                     <div class="subitemt">Maestro</div>
                 </div> 
             </div>

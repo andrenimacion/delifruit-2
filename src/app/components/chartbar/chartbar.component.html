@@ -1,0 +1,46 @@
+<div class="cont" id="cont1">
+  <div class="header">
+    <div class="circle"></div>
+    <div class="titleh">{{title}}</div>
+    <div class="btn_change" (click)="change()" matRipple>
+      <span class="material-icons icon_change">sync_alt</span>
+    </div>
+</div>
+ <div class="subcontt">
+<div class="items" ngClass.xs="itemsph" id="id_canvas">
+</div>
+  <div class="div_newtab"  ngClass.xs="itemsph">
+    <div class="aubdiv_newtab">
+      <table class="tab">
+        <tr class="tr1">
+          <td class="td1">Semana</td>
+          <td class="td1">Color</td>
+          <td class="td1">Deli 2</td>
+          <td class="td1">Deli 1</td>
+          <td class="td1">Deli 3</td>
+          <td class="td1">Deli 4</td>
+          <td class="td1">Deli 5</td>
+          <td class="td1">Deli 6</td>
+          <td class="td1">Deli 7</td>
+          <td class="td1">Deli 8</td>
+        </tr>
+        <tr class="tr2" *ngFor="let x of arr">
+          <td class="td2">{{x.sema}}</td>
+          <td class="td2">{{x.color_codec.trim()}}</td>
+          <td class="td2">{{x.delI_1}}</td>
+          <td class="td2">{{x.delI_2}}</td>
+          <td class="td2">{{x.delI_3}}</td>
+          <td class="td2">{{x.delI_4}}</td>
+          <td class="td2">{{x.delI_5}}</td>
+          <td class="td2">{{x.delI_6}}</td>
+          <td class="td2">{{x.delI_7}}</td>
+          <td class="td2">{{x.delI_8}}</td>
+          <td class="td2">{{x.delI_6}}</td>
+          <td class="td2">{{x.delI_7}}</td>
+          <td class="td2">{{x.delI_8}}</td>
+        </tr>
+      </table>
+    </div> 
+  </div>
+ </div>
+</div>
